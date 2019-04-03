@@ -1,0 +1,26 @@
+{
+  "name": "react-context-io",
+  "version": "0.0.1",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "jest",
+    "prepack": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^24.0.11",
+    "@types/react": "^16.8.10",
+    "@types/react-test-renderer": "^16.8.1",
+    "jest": "^24.7.0",
+    "react": "^16.8.6",
+    "react-test-renderer": "^16.8.6",
+    "ts-jest": "^24.0.1",
+    "typescript": "^3.4.1"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  }
+}
