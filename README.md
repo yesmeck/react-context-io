@@ -30,10 +30,10 @@ const Result = () => {
 const AddButton = () => <button onClick={CountStore.write(count => count + 1)}>+</button>;
 
 const Counter = () => (
-  <div>
+  <Store.Provider>
     <Result />
     <AddButton />
-  </div>
+  </Store.Provider>
 );
 ```
 
