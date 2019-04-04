@@ -20,7 +20,6 @@ $ yarn add react-context-io
 import React, { useContext } from 'react';
 import { createContextIO } from 'react-context-io';
 
-
 const CountStore = createContextIO(0);
 
 const Result = () => {
