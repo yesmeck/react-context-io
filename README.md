@@ -20,22 +20,27 @@ $ yarn add react-context-io
 import React, { useContext } from 'react';
 import { createContextIO } from 'react-context-io';
 
+
 const CountStore = createContextIO(0);
 
 const Result = () => {
   const count = useContext(CountStore);
-  return <div>count</div>;
+  return <div>{count}</div>;
 };
 
-const AddButton = () => <button onClick={CountStore.write(count => count + 1)}>+</button>;
+const AddButton = () => (
+  <button onClick={() => CountStore.write(count => count + 1)}>+</button>
+);
 
 const Counter = () => (
-  <Store.Provider>
+  <CountStore.Provider>
     <Result />
     <AddButton />
-  </Store.Provider>
+  </CountStore.Provider>
 );
 ```
+
+[Live demo](https://codesandbox.io/s/8n9r3kk79j)
 
 ## License
 
