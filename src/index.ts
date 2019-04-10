@@ -2,18 +2,26 @@ import * as React from 'react';
 
 const { useState } = React;
 
-export function createContextIO<T = any>(initialState: T) {
-  const Context: any = React.createContext<T>(initialState);
+export interface ContextIO<T> {
+  Provider: React.ProviderExoticComponent<Partial<React.ProviderProps<T>>>;
+  Consumer: React.Consumer<T>;
+  displayName?: string;
+  write: React.Dispatch<React.SetStateAction<T>>;
+  read: () => T;
+}
 
-  const NativeProvider = Context.Provider;
-  Context.Provider = ({ children }: React.Props<any>) => {
+export function createContextIO<T = any>(initialState: T) {
+  const Context: ContextIO<T> = React.createContext(initialState) as any;
+
+  const NativeProvider: React.Provider<T> = Context.Provider as any;
+  Context.Provider = (({ children }: React.Props<any>) => {
     const [state, setState] = useState<T>(initialState);
 
     Context.write = setState;
     Context.read = () => state;
 
     return React.createElement(NativeProvider, { value: state }, children);
-  };
+  }) as any;
 
   Context.write = Context.read = () => {
     throw new Error('ContextIO not mount');
