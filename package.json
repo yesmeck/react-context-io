@@ -2,9 +2,9 @@
   "name": "react-context-io",
   "version": "0.0.3",
   "description": "",
-  "main": "lib/index.js",
   "scripts": {
     "test": "jest",
+    "prebuild": "npm run clean",
     "build": "tsc",
     "clean": "rimraf lib",
     "prepack": "npm run build"
@@ -17,7 +17,14 @@
   "author": "",
   "repository": "github:yesmeck/react-context-io",
   "license": "MIT",
+  "@pika/pack": {
+    "pipeline": [
+      ["@pika/plugin-ts-standard-pkg"]
+    ]
+  },
   "devDependencies": {
+    "@pika/pack": "^0.3.7",
+    "@pika/plugin-ts-standard-pkg": "^0.3.14",
     "@types/jest": "^24.0.11",
     "@types/react": "^16.8.10",
     "@types/react-test-renderer": "^16.8.1",
