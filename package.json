@@ -4,9 +4,7 @@
   "description": "",
   "scripts": {
     "test": "jest",
-    "prebuild": "npm run clean",
-    "build": "tsc",
-    "clean": "rimraf lib",
+    "build": "pack build",
     "prepack": "npm run build"
   },
   "keywords": [
@@ -31,7 +29,6 @@
     "jest": "^24.7.0",
     "react": "^16.8.6",
     "react-test-renderer": "^16.8.6",
-    "rimraf": "^2.6.3",
     "ts-jest": "^24.0.1",
     "typescript": "^3.4.1"
   },
