@@ -1,6 +1,6 @@
 {
   "name": "react-context-io",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "",
   "scripts": {
     "test": "jest",
@@ -17,8 +17,12 @@
   "license": "MIT",
   "@pika/pack": {
     "pipeline": [
-      ["@pika/plugin-ts-standard-pkg"],
-      ["@pika/plugin-build-web"]
+      [
+        "@pika/plugin-ts-standard-pkg"
+      ],
+      [
+        "@pika/plugin-build-web"
+      ]
     ]
   },
   "devDependencies": {
