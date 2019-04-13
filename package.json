@@ -17,13 +17,13 @@
   "license": "MIT",
   "@pika/pack": {
     "pipeline": [
-      [
-        "@pika/plugin-ts-standard-pkg"
-      ]
+      ["@pika/plugin-ts-standard-pkg"],
+      ["@pika/plugin-build-web"]
     ]
   },
   "devDependencies": {
     "@pika/pack": "^0.3.7",
+    "@pika/plugin-build-web": "^0.3.14",
     "@pika/plugin-ts-standard-pkg": "^0.3.14",
     "@types/jest": "^24.0.11",
     "@types/react": "^16.8.10",
