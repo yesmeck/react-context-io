@@ -13,7 +13,7 @@
     "state"
   ],
   "author": "",
-  "repository": "github:yesmeck/react-context-io",
+  "repository": "git@github.com:yesmeck/react-context-io.git",
   "license": "MIT",
   "@pika/pack": {
     "pipeline": [
