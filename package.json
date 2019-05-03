@@ -5,7 +5,8 @@
   "scripts": {
     "test": "jest",
     "build": "pack build",
-    "prepack": "npm run build"
+    "prepack": "npm run build",
+    "release": "pack publish"
   },
   "keywords": [
     "react",
