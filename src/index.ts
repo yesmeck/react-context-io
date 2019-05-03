@@ -3,7 +3,7 @@ import * as React from 'react';
 const { useState } = React;
 
 export interface ContextIO<T> {
-  Provider: React.ProviderExoticComponent<Partial<React.ProviderProps<T>>>;
+  Provider: any;
   Consumer: React.Consumer<T>;
   displayName?: string;
   write: React.Dispatch<React.SetStateAction<T>>;
